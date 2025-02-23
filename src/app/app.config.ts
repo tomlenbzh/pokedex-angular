@@ -8,6 +8,7 @@ import {
   withHttpTransferCacheOptions,
   withIncrementalHydration,
 } from '@angular/platform-browser';
+import { provideStore } from '@ngrx/store';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -18,5 +19,6 @@ export const appConfig: ApplicationConfig = {
       withIncrementalHydration(),
       withHttpTransferCacheOptions({ includePostRequests: false }),
     ),
+    provideStore(),
   ],
 };
